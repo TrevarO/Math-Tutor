@@ -1,0 +1,92 @@
+#include <iostream>
+
+using namespace std;
+
+char choice;
+
+
+int main()
+{
+
+    //randomly generate two numbers, display them, and then add them together
+    //make it so when a key is pressed it will reveal the answer
+    int num1 =0;
+    int num2 =0;
+    int total =0;
+    int userentry =0;
+    int choice = 0;
+
+do {
+
+cout<<"Choose:\n1 for multiplication\n2 for Divison\n3 for addition\n4 for subtraction\n5 to quit.\n";
+cin>>choice;
+
+if(choice == 1)
+{   srand(time(0));
+    num1 = (rand () %15) ;
+    num2 = (rand() %15);
+    total = num1*num2;
+    cout<< "what is the product of: "<< num1 << " and : " << num2 << endl;
+    cin>>userentry;
+    if(userentry == total)
+        cout<<"Congtulations, you got it right!"<<endl;
+    else
+        cout<<"The correct answer is: "<< total<<endl;
+}
+    else if(choice == 2)
+            {
+    srand(time(0));
+    num1 = (rand () %15) ;
+    num2 = (rand() %15);
+    total = num1/num2;
+    cout<< "what is the quotient of: "<< num1 << " and : " << num2 << endl;
+    cin>>userentry;
+    if(userentry == total)
+        cout<<"Congtulations, you got it right!"<<endl;
+    else
+        cout<<"The correct answer is: "<< total<<endl;
+
+            }
+
+          else if(choice == 3)
+            {
+    srand(time(0));
+    num1 = (rand () %50) ;
+    num2 = (rand() %50);
+    total = num1+num2;
+    cout<< "what is the sum of: "<< num1 << " and : " << num2 << endl;
+    cin>>userentry;
+    if(userentry == total)
+        cout<<"Congtulations, you got it right!"<<endl;
+    else
+        cout<<"The correct answer is: "<< total<<endl;
+
+
+     }
+      else if(choice == 4)
+            {
+    srand(time(0));
+    num1 = (rand () %50) ;
+    num2 = (rand() %50);
+    total = num1-num2;
+    cout<< "what is the difference of: "<< num1 << " and : " << num2 << endl;
+    cin>>userentry;
+    if(userentry == total)
+        cout<<"Congtulations, you got it right!"<<endl;
+    else
+        cout<<"The correct answer is: "<< total<<endl;
+
+            }
+         else if(choice == 5)
+            {
+    return 0;
+
+            }
+            else
+            {
+                cout<< "Incorrect input";
+            }
+}
+while(choice != 0);
+ return 0;
+}
